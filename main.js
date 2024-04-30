@@ -18,11 +18,14 @@ document.addEventListener("DOMContentLoaded", function() {
         const listItem = document.createElement('li');
         listItem.textContent = orderText;
         orderList.appendChild(listItem);
+ 
 
         // Clear input fields
         document.getElementById('customerName').value = '';
         document.getElementById('pancakes').value = '';
         document.getElementById('eggs').value = '';
+
+        document.getElementById('customerName').focus();
     });
 
     clearListButton.addEventListener('click', function() {
