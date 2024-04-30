@@ -27,3 +27,15 @@ document.getElementById('output').innerHTML =
     sayHi('Billy Smith') + '<br>' +
     `The sum of ${num1} and ${num2} is: ${calculate(num1, num2)}.` + '<br>' +
     `The factorial of ${num3} is ${factorial(num3)}`;
+
+
+const pancakes = 0; 
+const eggs = 0; 
+
+function pancackesAndEggs (pancakes, eggs) {
+    return pancakes + eggs;
+}
+
+document.getElementById('output').innerHTML = 
+    
+; 
