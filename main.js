@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         let berriesStatus = berriesAdded ? 'Add Berries' : 'No Berries';
-        const orderText = `${customerName} will have ${pancakes} pancake${pancakes !== 1 ? 's' : ''} and ${eggs} egg${eggs !== 1 ? 's' : ''}. ${berriesStatus}`;
+        const orderText = `${customerName} will have ${pancakes} pancake${pancakes !== 1 ? 's' : ''} and ${eggs} egg${eggs !== 1 ? 's' : ''}.`;
 
         const listItem = document.createElement('li');
         listItem.textContent = orderText;
@@ -28,19 +28,13 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('pancakes').value = '';
         document.getElementById('eggs').value = '';
 
-        // Reset berriesAdded to false after placing the order
-        berriesAdded = false;
 
         // Focus on customer name input field
         document.getElementById('customerName').focus();
     });
 
-    addBerriesButton.addEventListener('click', function() {
-        berriesAdded = true; // Set berriesAdded to true when "Add Berries" button is clicked
-    });
 
     clearListButton.addEventListener('click', function() {
         orderList.innerHTML = ''; // Clear the list
-        berriesAdded = false; // Reset berriesAdded when list is cleared
     });
 });
