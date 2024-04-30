@@ -1,41 +1,31 @@
-// Create a function that prints the users name
-function sayHi(name){
-    return `Hello, ${name}!`
-};
 
-// Function to calc the sum of 2 numbers
-function calculate(a, b){
-    return(a + b);
-};
+document.addEventListener("DOMContentLoaded", function() {
+    const placeOrderButton = document.getElementById('placeOrder');
+    const clearListButton = document.getElementById('clearList');
+    const orderList = document.getElementById('orderList');
 
-// Function to return the factorial of a number
-function factorial(n) {
-    if (n === 0 || n === 1){
-        return 1; 
-    } else {
-        return n * factorial(n - 1);
-    }
-}; 
+    placeOrderButton.addEventListener('click', function() {
+        const customerName = document.getElementById('customerName').value;
+        const pancakes = parseInt(document.getElementById('pancakes').value);
+        const eggs = parseInt(document.getElementById('eggs').value);
 
-// Define variables for the numbers
-const num1 = 2;
-const num2 = 5;
-const num3 = 15;
+        if (customerName.trim() === '' || isNaN(pancakes) || isNaN(eggs)) {
+            alert('Please enter valid input for all fields.');
+            return;
+        }
 
-// Call the functions with the variables and display the results
-document.getElementById('output').innerHTML =
-    sayHi('Billy Smith') + '<br>' +
-    `The sum of ${num1} and ${num2} is: ${calculate(num1, num2)}.` + '<br>' +
-    `The factorial of ${num3} is ${factorial(num3)}`;
+        const orderText = `${customerName} will have ${pancakes} pancake${pancakes !== 1 ? 's' : ''} and ${eggs} egg${eggs !== 1 ? 's' : ''}.`;
+        const listItem = document.createElement('li');
+        listItem.textContent = orderText;
+        orderList.appendChild(listItem);
 
+        // Clear input fields
+        document.getElementById('customerName').value = '';
+        document.getElementById('pancakes').value = '';
+        document.getElementById('eggs').value = '';
+    });
 
-const pancakes = 0; 
-const eggs = 0; 
-
-function pancackesAndEggs (pancakes, eggs) {
-    return pancakes + eggs;
-}
-
-document.getElementById('output').innerHTML = 
-    
-; 
+    clearListButton.addEventListener('click', function() {
+        orderList.innerHTML = ''; // Clear the list
+    });
+});
