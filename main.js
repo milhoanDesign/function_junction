@@ -59,3 +59,8 @@ function myFunc(theObject) {
   // names will be ['John', 'Jane', 'Alice']
     
   console.log(names);
+
+    const numbers = [1, 2, 3, 4, 5];
+    const squaredNumbers = numbers.map(num => num * num);
+    // squaredNumbers will be [1, 4, 9, 16, 25]
+    console.log(squaredNumbers);
