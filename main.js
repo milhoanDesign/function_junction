@@ -38,29 +38,3 @@ document.addEventListener("DOMContentLoaded", function() {
         orderList.innerHTML = ''; // Clear the list
     });
 });
-
-
-function myFunc(theObject) {
-    theObject.make = "Toyota";
-  }
-  
-  const mycar = {
-    make: "Ford",
-    model: "F-350",
-    year: 1998,
-  };
-  
-  console.log(mycar.make); // "Honda"
-  myFunc(mycar);
-  console.log(mycar.make); // "Toyota"
-  
-  const apiData = [{ id: 1, name: 'John' }, { id: 2, name: 'Jane' }, { id: 3, name: 'Alice' }];
-  const names = apiData.map(person => person.name);
-  // names will be ['John', 'Jane', 'Alice']
-    
-  console.log(names);
-
-    const numbers = [1, 2, 3, 4, 5];
-    const squaredNumbers = numbers.map(num => num * num);
-    // squaredNumbers will be [1, 4, 9, 16, 25]
-    console.log(squaredNumbers);
