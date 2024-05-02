@@ -38,3 +38,24 @@ document.addEventListener("DOMContentLoaded", function() {
         orderList.innerHTML = ''; // Clear the list
     });
 });
+
+
+function myFunc(theObject) {
+    theObject.make = "Toyota";
+  }
+  
+  const mycar = {
+    make: "Ford",
+    model: "F-350",
+    year: 1998,
+  };
+  
+  console.log(mycar.make); // "Honda"
+  myFunc(mycar);
+  console.log(mycar.make); // "Toyota"
+  
+  const apiData = [{ id: 1, name: 'John' }, { id: 2, name: 'Jane' }, { id: 3, name: 'Alice' }];
+  const names = apiData.map(person => person.name);
+  // names will be ['John', 'Jane', 'Alice']
+    
+  console.log(names);
