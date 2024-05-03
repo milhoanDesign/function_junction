@@ -38,3 +38,9 @@ document.addEventListener("DOMContentLoaded", function() {
         orderList.innerHTML = ''; // Clear the list
     });
 });
+
+function greet(name) {
+    console.log(`Hello ${name}`);
+}
+
+greet('Walker'); 
