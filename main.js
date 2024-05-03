@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-function greet(name) {
-    console.log(`Hello ${name}`);
+function greet(firstName, lastName) {
+    console.log(`Hello ${firstName} ${lastName}`);
 }
 
-greet('Walker'); 
+greet('Walker', 'Milhoan'); 
