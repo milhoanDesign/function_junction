@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
     const placeOrderButton = document.getElementById('placeOrder');
-    const addBerriesButton = document.getElementById('addBerries');
     const clearListButton = document.getElementById('clearList');
     const orderList = document.getElementById('orderList');
 
