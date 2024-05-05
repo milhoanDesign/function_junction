@@ -38,8 +38,16 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-function greet(firstName, lastName) {
-    console.log(`Hello ${firstName} ${lastName}`);
+
+function calculateArea(length, width) {
+    return length * width; 
 }
 
-greet('Walker', 'Milhoan'); 
+function calculateCircleArea(radius) {
+    return Math.PI * Math.pow(radius, 2); 
+}
+
+function main() {
+    let width = parseFloat(prompt("Enter the length of the rectangle: "));
+    let height = parseFloat(prompt("Enter the height of the rectangle: ")); 
+}
