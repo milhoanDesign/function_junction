@@ -49,5 +49,15 @@ function calculateCircleArea(radius) {
 
 function main() {
     let width = parseFloat(prompt("Enter the length of the rectangle: "));
-    let height = parseFloat(prompt("Enter the height of the rectangle: ")); 
+    let length = parseFloat(prompt("Enter the height of the rectangle: ")); 
+
+    let radius = parseFloat(prompt("Please enter the radius of the circle: "));
+
+    let rectangleArea = calculateArea(length, width); 
+    console.log(`The area of the rectangle is: ${rectangleArea}`); 
+
+    let circleArea = calculateCircleArea(radius); 
+    console.log(`The area of the circle is: ${circleArea}`); 
 }
+
+main(); 
