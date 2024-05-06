@@ -1,63 +1,18 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const placeOrderButton = document.getElementById('placeOrder');
-    const clearListButton = document.getElementById('clearList');
-    const orderList = document.getElementById('orderList');
+// JavaScript file (script.js)
+document.addEventListener('DOMContentLoaded', function () {
+    const button = document.getElementById('displayMessageButton');
+    const message = document.getElementById('message');
 
-    let berriesAdded = false;
-
-    placeOrderButton.addEventListener('click', function() {
-        const customerName = document.getElementById('customerName').value;
-        const pancakes = parseInt(document.getElementById('pancakes').value);
-        const eggs = parseInt(document.getElementById('eggs').value);
-
-        if (customerName.trim() === '' || isNaN(pancakes) || isNaN(eggs)) {
-            alert('Please enter valid input for all fields.');
-            return;
+    button.addEventListener('click', function () {
+        // This is the outer function
+        function showMessage() {
+            // This is the nested function
+            function generateGreeting() {
+                return "Hello! You've clicked the button.";
+            }
+            message.textContent = generateGreeting();
         }
 
-        let berriesStatus = berriesAdded ? 'Add Berries' : 'No Berries';
-        const orderText = `${customerName} will have ${pancakes} pancake${pancakes !== 1 ? 's' : ''} and ${eggs} egg${eggs !== 1 ? 's' : ''}.`;
-
-        const listItem = document.createElement('li');
-        listItem.textContent = orderText;
-        orderList.appendChild(listItem);
-
-        // Clear input fields
-        document.getElementById('customerName').value = '';
-        document.getElementById('pancakes').value = '';
-        document.getElementById('eggs').value = '';
-
-
-        // Focus on customer name input field
-        document.getElementById('customerName').focus();
-    });
-
-
-    clearListButton.addEventListener('click', function() {
-        orderList.innerHTML = ''; // Clear the list
+        showMessage();
     });
 });
-
-
-function calculateArea(length, width) {
-    return length * width; 
-}
-
-function calculateCircleArea(radius) {
-    return Math.PI * Math.pow(radius, 2); 
-}
-
-function main() {
-    let width = parseFloat(prompt("Enter the length of the rectangle: "));
-    let length = parseFloat(prompt("Enter the height of the rectangle: ")); 
-
-    let radius = parseFloat(prompt("Please enter the radius of the circle: "));
-
-    let rectangleArea = calculateArea(length, width); 
-    console.log(`The area of the rectangle is: ${rectangleArea}`); 
-
-    let circleArea = calculateCircleArea(radius); 
-    console.log(`The area of the circle is: ${circleArea}`); 
-}
-
-main(); 
